@@ -35,28 +35,25 @@ ite = iter(b)
 print(next(ite))
 print(next(ite))
 
-# 3. Generatorlar
-# Oddiy generator funksiyasi
-def my_generator():
+def m_generator():
     for i in range(3):
         yield i
 
 print("\n3. Generatorlar:")
-for value in my_generator():
+for value in m_generator():
     print(f"Generator funksiyasi: {value}")
 
-# Generator ifodasi bilan
-generator_expression = (x**2 for x in range(5))
-for value in generator_expression:
+ad = (x**2 for x in range(5))
+for value in ad:
     print(f"Generator ifodasi: {value}")
 
-# 4. itertools moduli yordamida iterable va iteratorlar
-print("\n4. itertools yordamida:")
-cycled_colors = cycle(['red', 'blue', 'green'])
-print(f"Cycle: {next(cycled_colors)}")
-print(f"Cycle: {next(cycled_colors)}")
-print(f"Cycle: {next(cycled_colors)}")
 
-counter = count(start=1, step=2)
+print("\n4. itertools yordamida:")
+exe = cycle(['red', 'blue', 'green','black','qizil'])
+print(f"Cycle: {next(exe)}")
+print(f"Cycle: {next(exe)}")
+print(f"Cycle: {next(exe)}")
+
+one = count(start=1, step=2)
 for _ in range(3):
-    print(f"Count: {next(counter)}")
+    print(f"Count: {next(one)}")
